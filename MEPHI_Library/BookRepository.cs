@@ -16,11 +16,11 @@ namespace MEPHI_Library
         {
             _books = new List<Book>()
             {
-                new Book {ID = 1, Author = "Это автор", Name = "Книга такая", Publisher = "КЕКЕК", Section = "Особая", IsAvailable = true, Rating = "Хорошо" },
-                new Book {ID = 2, Author = "Эдар", Name = "Книая", Publisher = "КЕКЕК", Section = "Кря", IsAvailable = true, Rating = "Хорошо" },
-                new Book {ID = 3, Author = "Имав", Name = "Олды", Publisher = "ШОВ", Section = "Пщкн", IsAvailable = true, Rating = "Плохо" },
-                new Book {ID = 4, Author = "пип", Name = "Иыва", Publisher = "Длар", Section = "Пщкн", IsAvailable = false, Rating = "Отлично" },
-                new Book {ID = 5, Author = "Эдар", Name = "ТОавп", Publisher = "КЕКЕК", Section = "Кря", IsAvailable = false, Rating = "Хорошо" }
+                new Book {ID = 1, Author = "А автор", Name = "П книга", Publisher = "Ф издатель", Section = "А раздел", IsAvailable = true, Rating = "Хорошо" },
+                new Book {ID = 2, Author = "В автор", Name = "Л книга", Publisher = "П издательство", Section = "Л раздел", IsAvailable = true, Rating = "Хорошо" },
+                new Book {ID = 3, Author = "М автор", Name = "Р книга", Publisher = "Ю издательство", Section = "Д раздел", IsAvailable = true, Rating = "Плохо" },
+                new Book {ID = 4, Author = "Б автор", Name = "А книга", Publisher = "Д издатель", Section = "Л раздел", IsAvailable = false, Rating = "Отлично" },
+                new Book {ID = 5, Author = "В автор", Name = "Т книга", Publisher = "Ф издатель", Section = "Л раздел", IsAvailable = false, Rating = "Хорошо" }
             };
         }
 
@@ -58,7 +58,6 @@ namespace MEPHI_Library
         {
             string result = string.Format("{0,-10} | {1,12} | {2,23} | {3,18} | {4,18} | {5,7}", "КОД", "АВТОР", "НАЗВАНИЕ", "ИЗДАТЕЛЬСТВО", "РАЗДЕЛ", "НАЛИЧИЕ");
             result += "\n________________________________________________________________________________________";
-            //string result = "";
             foreach (var item in _books)
             {
                 result += "\n" + item.ToString();
@@ -77,16 +76,6 @@ namespace MEPHI_Library
 
         public void AddBook(Book book)
         {
-            //var bookToAdd = new Book 
-            //{ 
-            //    ID = MaxID() + 1, 
-            //    Author = book.Author, 
-            //    Name = book.Name, 
-            //    Publisher = book.Publisher, 
-            //    Section = book.Section, 
-            //    IsAvailable = book.IsAvailable,
-            //    Rating = book.Rating
-            //};
             var bookToAdd = book;
             bookToAdd.ID = MaxID() + 1;
             _books.Add(bookToAdd);
